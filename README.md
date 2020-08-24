@@ -1,7 +1,7 @@
 # Quotes
 
 Developer: James Maina.
-To run this site click [here]
+To run this site click [here](https://quotes-world.netlify.app/)
 ## Description
 
 This quote project enables user to post the quotes that motivates them and they can display them for other people too.
