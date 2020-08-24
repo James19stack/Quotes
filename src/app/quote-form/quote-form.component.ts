@@ -12,7 +12,7 @@ export class QuoteFormComponent implements OnInit {
     'display':'float-left',
     'border':'1px solid green',
     'border-radius':'10px',
-    'background-color':'rgb(73, 55, 30)',
+    'background-color':'purple',
     'color':'white',
     'padding-left':'15px'
  }
