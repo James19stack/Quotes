@@ -1,6 +1,6 @@
 import { Directive , ElementRef, Input, OnInit } from '@angular/core';
-import { Quotes } from './quotes';
-import { QuotesComponent } from './quotes/quotes.component';
+import { Quotes } from './quote';
+
 
 @Directive({
   selector: '[appVotes]'
@@ -13,6 +13,6 @@ export class VotesDirective implements OnInit{
       this.elem.nativeElement.style.color="black"
   }
 ngOnInit(){
-  
+
 }
 }
