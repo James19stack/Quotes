@@ -1,1 +1,33 @@
-<p>quotes works!</p>
+<body class="container-fluid">
+    <div [ngStyle]='mystyles'>
+        <h1>QUOTES WORLD</h1>
+    </div>
+    <div class="row">
+        <div class="container">
+            <app-qoute-form (addQuote)='addNewQuote($event)'></app-qoute-form>
+        </div>
+        <hr>
+        <div class="container card">
+            <div>
+                <h2 [ngStyle]='bodyhead'>Quotes</h2>
+            </div>
+            <div *ngFor='let quote of quotes; let i = index' appMostVotes>
+                <div>
+                    <h4>{{i+1}} {{quote.quote}} </h4><br>
+                    <span [class]="span">Likes: {{quote.upVotes}}</span> <span [class]="spain">Dislikes: {{quote.downVotes}}</span>
+                </div>
+                <div>
+                    <span [class]="margin"><button [ngStyle]='liked(i)' (click)='upvotes(i)' >upvotes</button>{{quote.upVotes}}</span> <span [class]="margin"> <button  (click)='downvotes(i)' [ngStyle]='disliked(i)'>downvotes</button>{{quote.downVotes}}</span><br> <br>
+                    <button class="btn btn-primary" (click)='quoteDetails(i)'>QUOTE DETAILS!</button>
+                    <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (delete)="quoteDelete($event,i)"></app-quote-details>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <footer [ngStyle]='footer'>
+        <p>Developer: Dennis Mbugua.</p>
+        <p>Location: Nairobi,Kenya.</p>
+        <p>&copy; 2020.</p>
+    </footer>
+</body>
