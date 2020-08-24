@@ -1,1 +1,6 @@
-<p>quote-details works!</p>
+<div>
+    <p>The Author of the quote is {{quote.author}}</p>
+    <p>Posted by {{quote.name}}</p>
+    <p>This quote was posted {{quote.date | customDate}}</p>
+    <button (click)='deleteQuote(true)' class="btn btn-danger">Delete Quote!</button>
+</div>
